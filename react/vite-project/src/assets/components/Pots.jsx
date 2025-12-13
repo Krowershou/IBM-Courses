@@ -1,6 +1,6 @@
 import './Pots.css'
 
-export default function Pots() {
+export default function Pots({ onAddToCart }) {
   const macetas = [
     {
       id: 1,
@@ -42,7 +42,12 @@ export default function Pots() {
             <h3>{maceta.nombre}</h3>
             <p className="descripcion">{maceta.descripcion}</p>
             <p className="precio">{maceta.precio}</p>
-            <button className="add-button">Agregar al carrito</button>
+            <button 
+              className="add-button"
+              onClick={() => onAddToCart(maceta, 'maceta')}
+            >
+              Agregar al carrito
+            </button>
           </div>
         ))}
       </div>

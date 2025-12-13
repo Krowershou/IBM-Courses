@@ -4,7 +4,7 @@ import Golden from '../images/pothosDorado.jpg'
 import Snake from '../images/snakePlant.jpg'
 import Fiddle from '../images/plantasInicio.jpg'
 
-export default function Plants() {
+export default function Plants({ onAddToCart }) {
   const plantas = [
     {
       id: 1,
@@ -46,7 +46,12 @@ export default function Plants() {
             <h3>{planta.nombre}</h3>
             <p className="descripcion">{planta.descripcion}</p>
             <p className="precio">{planta.precio}</p>
-            <button className="add-button">Agregar al carrito</button>
+            <button 
+              className="add-button"
+              onClick={() => onAddToCart(planta, 'planta')}
+            >
+              Agregar al carrito
+            </button>
           </div>
         ))}
       </div>
