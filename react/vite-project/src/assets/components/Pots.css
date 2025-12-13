@@ -1,0 +1,81 @@
+.pots-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8f0f7 100%);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pots-section h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #1e5f3f;
+  margin-bottom: 50px;
+}
+
+.pots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.pot-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.pot-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pot-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.pot-card h3 {
+  font-size: 20px;
+  color: #1e5f3f;
+  margin: 20px 15px 10px;
+}
+
+.pot-card .descripcion {
+  font-size: 14px;
+  color: #999;
+  margin: 0 15px;
+}
+
+.pot-card .precio {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2d8659;
+  margin: 15px 15px 15px;
+}
+
+.add-button {
+  width: calc(100% - 30px);
+  margin: 0 15px 15px;
+  padding: 12px;
+  background: linear-gradient(135deg, #1e5f3f 0%, #2d8659 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-button:hover {
+  background: linear-gradient(135deg, #1a4a31 0%, #245947 100%);
+}
+
+@media (max-width: 768px) {
+  .pots-grid {
+    grid-template-columns: 1fr;
+  }
+}
